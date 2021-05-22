@@ -10,7 +10,7 @@ import {
 	UserModel,
 	toObject,
 } from "@fosscord/server-util";
-import { IdentifySchema } from "../schema/Identify";
+import { IdentifySchema } from "../schema/Identify"; //Idk if that's needed
 import { Send } from "../util/Send";
 import experiments from "./experiments.json";
 
@@ -32,27 +32,26 @@ export async function onIdentify(this: WebSocket, data: Payload) {
 
 	const identify: IdentifySchema = data.d;
 
-	try {
+	/*try {
 		var decoded = await checkToken(identify.token); // will throw an error if invalid
 	} catch (error) {
 		console.error("invalid token", error);
 		return this.close(CLOSECODES.Authentication_failed);
 	}
 
-	this.user_id = decoded.id;
-	let server_id:number = decoded.server_id;
-	let session_id:number = decoded.session_id
-	}
+	this.user_id = data.id;
+	let server_id:number = data.server_id;
+	let session_id:number = data.session_id*/
 
-	const user = await UserModel.findOne({ id: this.user_id }).exec();
-	if (!user) return this.close(CLOSECODES.Authentication_failed);
+	//const user = await UserModel.findOne({ id: this.user_id }).exec();
+	//if (!user) return this.close(CLOSECODES.Authentication_failed);
 
 
-	const d: ReadyEventData = {
+	const d = {
 		ssrc: 1,
 		ip: 1,
 		port: 1234,
-		modes: [],
+		modes: [""],
 		heartbeat_interval: 1 //Useless, but kept for interoperability
 	};
 

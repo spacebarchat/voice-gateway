@@ -30,7 +30,7 @@ export async function Connection(this: Server, socket: WebSocket, request: Incom
 
 		// @ts-ignore
 		socket.version = Number(searchParams.get("version")) || 8;
-		if (socket.version != 8) return socket.close(CLOSECODES.Invalid_API_version);
+		//if (socket.version != 8) return socket.close(CLOSECODES.Invalid_API_version);
 
 		// @ts-ignore
 		socket.compress = searchParams.get("compress") || "";
@@ -54,6 +54,7 @@ export async function Connection(this: Server, socket: WebSocket, request: Incom
 		socket.readyTimeout = setTimeout(() => {
 			return socket.close(CLOSECODES.Session_timed_out);
 		}, 1000 * 30);
+		
 	} catch (error) {
 		console.error(error);
 		return socket.close(CLOSECODES.Unknown_error);

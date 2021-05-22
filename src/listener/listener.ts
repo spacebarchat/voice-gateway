@@ -200,9 +200,7 @@ export async function dispatch(this: WebSocket, document: Event, { eventStream, 
 	}
 
 	return Send(this, {
-		op: OPCODES.Dispatch,
-		t: document.event,
+		op: 99,
 		d: document.data,
-		s: this.sequence++,
 	});
 }

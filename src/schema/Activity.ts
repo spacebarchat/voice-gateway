@@ -1,5 +1,4 @@
 import { ActivityBodySchema } from "@fosscord/server-util";
-import { EmojiSchema } from "./Emoji";
 
 export const ActivitySchema = {
 	afk: Boolean,
@@ -25,7 +24,6 @@ export interface ActivitySchema {
 			application_id?: string; // application id for the game
 			details?: string;
 			state?: string;
-			emoji?: EmojiSchema;
 			party?: {
 				id?: string;
 				size?: [number]; // used to show the party's current and maximum size // TODO: array length 2
