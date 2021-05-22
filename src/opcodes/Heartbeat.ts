@@ -8,5 +8,5 @@ export async function onHeartbeat(this: WebSocket, data: Payload) {
 
 	setHeartbeat(this);
 
-	await Send(this, { op: 11 });
+	await Send(this, { op: 6 }); //Heartbeat ACK
 }

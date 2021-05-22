@@ -1,7 +1,7 @@
 <p align="center">
   <img width="100" src="https://raw.githubusercontent.com/fosscord/fosscord/master/assets/logo_big_transparent.png" />
 </p>
-<h1 align="center">Fosscord WebSocket Gateway Server</h1>
+<h1 align="center">Fosscord WebSocket VoiceGateway Server</h1>
 
 <p>
   <a href="https://discord.gg/ZrnGQP6p3d"><img src="https://img.shields.io/discord/806142446094385153?color=7489d5&logo=discord&logoColor=ffffff" /></a>
@@ -12,18 +12,9 @@
 
 ## [About](https://github.com/fosscord/fosscord-gateway/wiki)
 
-Fosscord is **f**ree **o**pen **s**ource **s**oftware compatible to dis**cord**. It is a selfhostable Chat, Voice and Video platform similar to Slack, Rocket.chat and Discord-compatible.
+This is the voice gateway responsible of managing voice connections.
 
--   Discord-compatible
--   Selfhostable
--   Open Source
--   Configurable
--   Secure
--   Decentralized
--   Extendable
--   Themeable
 
-logo by [@nwlandas](https://twitter.com/nwlandas)
 
 ## Installation
 
