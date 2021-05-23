@@ -1,0 +1,3 @@
+[submodule "fosscord-rtc"]
+	path = fosscord-rtc
+	url = https://github.com/fosscord/fosscord-rtc
